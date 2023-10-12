@@ -1,1 +1,22 @@
-<p>signup works!</p>
+<div class="container">
+  <button class="profile-icon" (click)="toggleForm()">👤</button>
+  <form [hidden]="!showForm" class="signup-form">
+    <h1>Sign Up</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <p class="signin-link">Already have an account? <a href="#">Sign In</a></p>
+
+
+    <button type="submit">Create Account</button>
+    <div class="social-login-buttons">
+      <button class="google-login" (click)="loginWithGoogle()">Sign Up with Google</button>
+      <button class="facebook-login" (click)="loginWithFacebook()">Sign Up with Facebook</button>
+    </div>
+
+
+  </form>
+</div>
